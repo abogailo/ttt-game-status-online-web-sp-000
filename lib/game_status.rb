@@ -13,16 +13,16 @@ WIN_COMBINATIONS = [
 
  def current_player(board)
   turn_count(board) % 2 == 0 ? "X" : "O"
-end
+ end
 
  def won?(board)
 
    WIN_COMBINATIONS.detect do |win_combination|
-    win_index_1 = win_combination[0]
-    win_index_2 = win_combination[1]
-    win_index_3 = win_combination[2]
+    win_index_1 = win_combination[3]
+    win_index_2 = win_combination[4]
+    win_index_3 = win_combination[5]
 
-     position_1 = board[win_index_1]
+    position_1 = board[win_index_1]
     position_2 = board[win_index_2]
     position_3 = board[win_index_3]
 
