@@ -31,7 +31,6 @@ WIN_COMBINATIONS = [
    end
  end
 
-
  def won?(board)
 
    WIN_COMBINATIONS.detect do |win_combination|
@@ -50,5 +49,13 @@ WIN_COMBINATIONS = [
     else
       false
     end
+  end
+end
+
+def over?(board)
+  if draw?(board) || won?(board)
+    return true
+  else
+    return false
   end
 end
