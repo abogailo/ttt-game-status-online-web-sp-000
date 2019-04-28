@@ -23,6 +23,15 @@ WIN_COMBINATIONS = [
    end
  end
 
+ def draw?(board)
+   if !won?(board) && full?(board)
+     return true
+   else
+     return false
+   end
+ end
+
+
  def won?(board)
 
    WIN_COMBINATIONS.detect do |win_combination|
