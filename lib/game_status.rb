@@ -15,6 +15,14 @@ WIN_COMBINATIONS = [
   turn_count(board) % 2 == 0 ? "X" : "O"
  end
 
+ def full?(board)
+   if board.detect {|i| i == " " || i == nil}
+     return false
+   else
+     return true
+   end
+ end
+
  def won?(board)
 
    WIN_COMBINATIONS.detect do |win_combination|
